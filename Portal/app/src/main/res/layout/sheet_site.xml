@@ -1,0 +1,46 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingStart="24dp" android:paddingEnd="24dp"
+        android:paddingTop="8dp" android:paddingBottom="32dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="This site" android:textColor="?attr/colorOnSurface"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"/>
+        <TextView android:id="@+id/siteHost" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSurfaceVariant" android:textAppearance="?attr/textAppearanceBodyMedium"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" android:text="Dark pages" android:textColor="?attr/colorPrimary"
+            android:textAppearance="?attr/textAppearanceLabelLarge"/>
+        <com.google.android.material.chip.ChipGroup android:id="@+id/siteDark" android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:selectionRequired="true" app:singleSelection="true">
+            <com.google.android.material.chip.Chip android:id="@+id/sd_def" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Default"/>
+            <com.google.android.material.chip.Chip android:id="@+id/sd_on" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="On"/>
+            <com.google.android.material.chip.Chip android:id="@+id/sd_off" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Off"/>
+        </com.google.android.material.chip.ChipGroup>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="Custom scripts and styles" android:textColor="?attr/colorPrimary"
+            android:textAppearance="?attr/textAppearanceLabelLarge"/>
+        <com.google.android.material.chip.ChipGroup android:id="@+id/siteScripts" android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:selectionRequired="true" app:singleSelection="true">
+            <com.google.android.material.chip.Chip android:id="@+id/ss_def" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Default"/>
+            <com.google.android.material.chip.Chip android:id="@+id/ss_on" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="On"/>
+            <com.google.android.material.chip.Chip android:id="@+id/ss_off" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Off"/>
+        </com.google.android.material.chip.ChipGroup>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="DNS" android:textColor="?attr/colorPrimary"
+            android:textAppearance="?attr/textAppearanceLabelLarge"/>
+        <com.google.android.material.chip.ChipGroup android:id="@+id/siteDns" android:layout_width="match_parent"
+            android:layout_height="wrap_content" app:selectionRequired="true" app:singleSelection="true">
+            <com.google.android.material.chip.Chip android:id="@+id/sn_def" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Default"/>
+            <com.google.android.material.chip.Chip android:id="@+id/sn0" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="System"/>
+            <com.google.android.material.chip.Chip android:id="@+id/sn1" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cloudflare"/>
+            <com.google.android.material.chip.Chip android:id="@+id/sn2" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Google"/>
+            <com.google.android.material.chip.Chip android:id="@+id/sn3" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AdGuard"/>
+            <com.google.android.material.chip.Chip android:id="@+id/sn4" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quad9"/>
+        </com.google.android.material.chip.ChipGroup>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="Default follows the global setting in Settings."
+            android:textColor="?attr/colorOnSurfaceVariant" android:textAppearance="?attr/textAppearanceBodySmall"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

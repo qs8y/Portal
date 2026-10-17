@@ -1,0 +1,138 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="ShapeAppearance.App.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+    <style name="ShapeAppearance.App.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">28dp</item>
+    </style>
+
+    <style name="Theme.App" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#9C3D69</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">#FFD8E7</item>
+        <item name="colorOnPrimaryContainer">#3C0A24</item>
+        <item name="colorSecondary">#745660</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorSecondaryContainer">#FFD9E3</item>
+        <item name="colorOnSecondaryContainer">#2B1520</item>
+        <item name="colorTertiary">#7B5733</item>
+        <item name="colorOnTertiary">#FFFFFF</item>
+        <item name="colorTertiaryContainer">#FFDCBE</item>
+        <item name="colorOnTertiaryContainer">#2D1600</item>
+        <item name="android:colorBackground">#FFF8F8</item>
+        <item name="colorSurface">#FFF8F8</item>
+        <item name="colorOnSurface">#211A1C</item>
+        <item name="colorSurfaceVariant">#F3DDE2</item>
+        <item name="colorOnSurfaceVariant">#514348</item>
+        <item name="colorOutline">#837378</item>
+        <item name="colorSurfaceInverse">#372E30</item>
+        <item name="colorOnSurfaceInverse">#FBEEEF</item>
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">true</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.App.Large</item>
+    </style>
+    <style name="PlayerChip">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/bg_pip_round</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="FloatBtn">
+        <item name="android:layout_width">38dp</item>
+        <item name="android:layout_height">38dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">#66000000</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <style name="ToolPill">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">36dp</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:drawableTint">#FFFFFF</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:background">@drawable/bg_pip_round</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="ShapeAppearance.Portal.Clean.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    <style name="ShapeAppearance.Portal.Clean.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    <style name="ShapeAppearance.Portal.Expressive.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+    <style name="ShapeAppearance.Portal.Expressive.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">36dp</item>
+    </style>
+    <style name="ShapeAppearance.Portal.Dark.Medium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+    <style name="ShapeAppearance.Portal.Dark.Large" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+    <style name="Theme.Portal.Clean" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Portal.Clean.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Portal.Clean.Large</item>
+        <item name="portalBarRadius">20dp</item>
+        <item name="portalBarColor">?attr/colorSurfaceVariant</item>
+        <item name="portalBarElevation">0dp</item>
+    </style>
+    <style name="Theme.Portal.Expressive" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Portal.Expressive.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Portal.Expressive.Large</item>
+        <item name="portalBarRadius">32dp</item>
+        <item name="portalBarColor">?attr/colorSecondaryContainer</item>
+        <item name="portalBarElevation">6dp</item>
+    </style>
+    <style name="Theme.Portal.Dark" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Portal.Dark.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Portal.Dark.Large</item>
+        <item name="portalBarRadius">24dp</item>
+        <item name="portalBarColor">#FF1C1C22</item>
+        <item name="portalBarElevation">0dp</item>
+        <item name="colorPrimary">#8AB4FF</item>
+        <item name="colorOnPrimary">#0B0B0F</item>
+        <item name="colorPrimaryContainer">#203252</item>
+        <item name="colorOnPrimaryContainer">#D6E3FF</item>
+        <item name="colorSecondaryContainer">#1C1C22</item>
+        <item name="colorOnSecondaryContainer">#ECECF2</item>
+        <item name="colorSurface">#0B0B0F</item>
+        <item name="colorOnSurface">#ECECF2</item>
+        <item name="colorSurfaceVariant">#1C1C22</item>
+        <item name="colorOnSurfaceVariant">#A0A0AE</item>
+        <item name="android:colorBackground">#0B0B0F</item>
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

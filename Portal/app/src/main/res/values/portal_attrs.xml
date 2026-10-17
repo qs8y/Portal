@@ -1,0 +1,5 @@
+<resources>
+    <attr name="portalBarRadius" format="dimension"/>
+    <attr name="portalBarColor" format="color"/>
+    <attr name="portalBarElevation" format="dimension"/>
+</resources>
