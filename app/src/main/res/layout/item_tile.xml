@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+    android:background="?attr/selectableItemBackgroundBorderless" android:clickable="true"
+    android:focusable="true" android:gravity="center_horizontal" android:orientation="vertical"
+    android:paddingTop="8dp" android:paddingBottom="8dp">
+    <ImageView android:id="@+id/tileIcon" android:layout_width="64dp" android:layout_height="64dp"
+        android:background="@drawable/bg_tile" android:padding="18dp"
+        app:tint="?attr/colorOnSecondaryContainer" android:importantForAccessibility="no"/>
+    <TextView android:id="@+id/tileLabel" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:gravity="center" android:maxLines="2"
+        android:textColor="?attr/colorOnSurface"
+        android:textAppearance="?attr/textAppearanceLabelLarge"/>
+</LinearLayout>

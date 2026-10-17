@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal</title>
+<style>
+:root { --bg:#fff; --fg:#17151a; --muted:#625d68; --card:#f4f1f6; --accent:#8b3a9c; --on:#fff; }
+@media (prefers-color-scheme: dark) { :root { --bg:#141216; --fg:#efecf2; --muted:#a8a2b0; --card:#211e25; --accent:#d9a0e6; --on:#2a1230; } }
+* { box-sizing:border-box; }
+body { margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--fg); line-height:1.5; }
+main { max-width:720px; margin:0 auto; padding:64px 24px 48px; }
+h1 { font-size:2.6rem; margin:0 0 8px; }
+p.lead { font-size:1.15rem; color:var(--muted); margin:0 0 32px; }
+.btn { display:inline-block; padding:14px 28px; border-radius:999px; background:var(--accent); color:var(--on); font-weight:600; text-decoration:none; }
+.sub { display:block; margin-top:10px; color:var(--muted); font-size:.9rem; }
+ul { list-style:none; padding:0; margin:48px 0 0; display:grid; gap:12px; }
+li { background:var(--card); border-radius:18px; padding:16px 20px; }
+li b { display:block; }
+li span { color:var(--muted); font-size:.95rem; }
+footer { margin-top:48px; color:var(--muted); font-size:.9rem; }
+a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Portal</h1>
+  <p class="lead">Browse the websites you add, with a built-in player and saved states that remember the exact second.</p>
+  <a class="btn" id="dl" href="https://github.com/losisu/Portal/releases/latest">Download for Android</a>
+  <span class="sub" id="ver">Latest release on GitHub</span>
+  <ul>
+    <li><b>Your sites only</b><span>No websites are included. Add the ones you want when you first open the app.</span></li>
+    <li><b>Saved states</b><span>Snapshot a page and its video position, then come back to it later.</span></li>
+    <li><b>Built-in player</b><span>Speed control, mini player, floating window and lock-screen controls.</span></li>
+    <li><b>Continue watching</b><span>Resume your last videos from a shelf with thumbnails.</span></li>
+    <li><b>Per-site settings</b><span>Dark pages, custom scripts and DNS for each website.</span></li>
+  </ul>
+  <footer>
+    <a href="https://github.com/losisu/Portal">Source on GitHub</a> &middot; <a href="https://github.com/losisu/Portal/issues">Report an issue</a><br>
+    Portal includes no content. You are responsible for what you open and for following each website's terms.
+  </footer>
+</main>
+<script>
+fetch("https://api.github.com/repos/losisu/Portal/releases/latest").then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+  if (!j) return;
+  var apk = (j.assets || []).filter(function (a) { return /\.apk$/.test(a.name); })[0];
+  if (apk) document.getElementById("dl").href = apk.browser_download_url;
+  document.getElementById("ver").textContent = "Version " + String(j.tag_name).replace(/^v/, "");
+}).catch(function () {});
+</script>
+</body>
+</html>

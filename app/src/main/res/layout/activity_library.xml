@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?attr/colorSurface" android:fitsSystemWindows="true" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
+        android:gravity="center_vertical" android:orientation="horizontal"
+        android:paddingStart="8dp" android:paddingEnd="8dp">
+        <ImageButton android:id="@+id/back" android:layout_width="48dp" android:layout_height="48dp"
+            android:padding="12dp" android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back" android:scaleType="fitCenter"
+            android:src="@drawable/ic_back" app:tint="?attr/colorOnSurface"/>
+        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_marginStart="8dp" android:text="Library" android:textColor="?attr/colorOnSurface"
+            android:textAppearance="?attr/textAppearanceHeadlineMedium"/>
+        <Button android:id="@+id/btnClear" style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear"/>
+    </LinearLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginBottom="8dp"
+        android:hint="Search history, favorites and saved states">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/libSearch"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:inputType="text" android:singleLine="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.tabs.TabLayout android:id="@+id/tabs"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="?attr/colorSurface">
+        <com.google.android.material.tabs.TabItem android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="History"/>
+        <com.google.android.material.tabs.TabItem android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Favorites"/>
+    </com.google.android.material.tabs.TabLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ListView android:id="@+id/list" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:divider="@null"/>
+        <TextView android:id="@+id/empty" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="center" android:text="Nothing here yet"
+            android:textColor="?attr/colorOnSurfaceVariant" android:textAppearance="?attr/textAppearanceBodyLarge"/>
+    </FrameLayout>
+</LinearLayout>

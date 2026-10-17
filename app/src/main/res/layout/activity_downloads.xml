@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="?attr/colorSurface" android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp"
+        android:gravity="center_vertical" android:orientation="horizontal"
+        android:paddingStart="8dp" android:paddingEnd="16dp">
+        <ImageButton android:id="@+id/back" android:layout_width="48dp" android:layout_height="48dp"
+            android:padding="12dp" android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back" android:scaleType="fitCenter"
+            android:src="@drawable/ic_back" app:tint="?attr/colorOnSurface"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" android:text="Downloads"
+            android:textColor="?attr/colorOnSurface"
+            android:textAppearance="?attr/textAppearanceHeadlineMedium"/>
+    </LinearLayout>
+    <TextView android:id="@+id/storage" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingStart="24dp" android:paddingEnd="24dp" android:paddingBottom="8dp"
+        android:textColor="?attr/colorOnSurfaceVariant" android:textAppearance="?attr/textAppearanceBodySmall"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ListView android:id="@+id/list" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:clipToPadding="false"
+            android:divider="@null" android:paddingBottom="16dp"/>
+        <TextView android:id="@+id/empty" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_gravity="center"
+            android:text="No downloads yet" android:textColor="?attr/colorOnSurfaceVariant"
+            android:textAppearance="?attr/textAppearanceBodyLarge"/>
+    </FrameLayout>
+</LinearLayout>

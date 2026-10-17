@@ -1,0 +1,19 @@
+<com.portal.app.TouchFrame xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/proot"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="#000">
+    <androidx.media3.ui.PlayerView android:id="@+id/pv" android:layout_width="match_parent"
+        android:layout_height="match_parent" app:resize_mode="fit" app:use_controller="true"
+        app:show_buffering="when_playing"/>
+    <LinearLayout android:id="@+id/ptop" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="top|end" android:layout_margin="16dp" android:orientation="horizontal">
+        <TextView android:id="@+id/btnSave" style="@style/PlayerChip" android:text="Save"/>
+        <TextView android:id="@+id/btnSpeed" style="@style/PlayerChip" android:text="1x"/>
+        <TextView android:id="@+id/btnFloat" style="@style/PlayerChip" android:text="Float"/>
+        <TextView android:id="@+id/btnPip" style="@style/PlayerChip" android:text="PiP"/>
+        <TextView android:id="@+id/btnClose" style="@style/PlayerChip" android:text="Close"/>
+    </LinearLayout>
+    <TextView android:id="@+id/phint" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal" android:layout_marginTop="48dp"
+        android:background="@drawable/bg_pip_round" android:paddingStart="18dp" android:paddingEnd="18dp"
+        android:paddingTop="8dp" android:paddingBottom="8dp" android:textColor="#FFFFFF" android:visibility="gone"/>
+</com.portal.app.TouchFrame>

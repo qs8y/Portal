@@ -1,0 +1,31 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.App" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#FFAFD2</item>
+        <item name="colorOnPrimary">#5B1139</item>
+        <item name="colorPrimaryContainer">#7A2A51</item>
+        <item name="colorOnPrimaryContainer">#FFD8E7</item>
+        <item name="colorSecondary">#E3BDC9</item>
+        <item name="colorOnSecondary">#422932</item>
+        <item name="colorSecondaryContainer">#4F3540</item>
+        <item name="colorOnSecondaryContainer">#FFD9E3</item>
+        <item name="colorTertiary">#EEBD92</item>
+        <item name="colorOnTertiary">#472A0A</item>
+        <item name="colorTertiaryContainer">#61401E</item>
+        <item name="colorOnTertiaryContainer">#FFDCBE</item>
+        <item name="android:colorBackground">#130E10</item>
+        <item name="colorSurface">#130E10</item>
+        <item name="colorOnSurface">#EFDFE1</item>
+        <item name="colorSurfaceVariant">#2A2023</item>
+        <item name="colorOnSurfaceVariant">#D6C1C7</item>
+        <item name="colorOutline">#9F8C92</item>
+        <item name="colorSurfaceInverse">#EFDFE1</item>
+        <item name="colorOnSurfaceInverse">#372E30</item>
+        <item name="android:windowBackground">?attr/colorSurface</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.App.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.App.Large</item>
+    </style>
+</resources>

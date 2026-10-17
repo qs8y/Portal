@@ -1,0 +1,184 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:id="@+id/settingsRoot" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingStart="24dp" android:paddingEnd="24dp"
+        android:paddingTop="8dp" android:paddingBottom="32dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Settings" android:textColor="?attr/colorOnSurface"
+            android:textAppearance="?attr/textAppearanceHeadlineSmall"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"
+            android:hint="Search settings">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/settingsSearch"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:inputType="text" android:singleLine="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout android:tag="section" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:tag="header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="0dp" android:text="General" android:textColor="?attr/colorPrimary"
+            android:textAppearance="?attr/textAppearanceLabelLarge"/>
+            <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/themeGroup" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" app:selectionRequired="true" app:singleSelection="true">
+                <Button android:id="@+id/t_sys" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="System"/>
+                <Button android:id="@+id/t_light" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Light"/>
+                <Button android:id="@+id/t_dark" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Dark"/>
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+            <TextView android:tag="row" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="App style" android:textColor="?attr/colorOnSurface"
+                android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <TextView android:tag="sub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Applies the next time you open Portal" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textAppearance="?attr/textAppearanceBodySmall"/>
+            <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/styleGroup" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" app:selectionRequired="true" app:singleSelection="true">
+                <Button android:id="@+id/st_clean" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Clean"/>
+                <Button android:id="@+id/st_expr" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Expressive"/>
+                <Button android:id="@+id/st_dark" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Dark"/>
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+            <LinearLayout android:tag="row" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:orientation="horizontal">
+                <Button android:id="@+id/btnExport" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Export backup"/>
+                <Button android:id="@+id/btnImport" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:text="Import backup"/>
+            </LinearLayout>
+            <LinearLayout android:tag="row" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:orientation="horizontal">
+                <Button android:id="@+id/btnSetUpdate" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Update source"/>
+                <Button android:id="@+id/btnCheckUpdate" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:text="Check for updates"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:tag="section" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:tag="header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Browsing" android:textColor="?attr/colorPrimary"
+            android:textAppearance="?attr/textAppearanceLabelLarge"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/sw_adblock" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:minHeight="48dp" android:text="Ad &amp; popup blocker"
+                android:textColor="?attr/colorOnSurface" android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <Button android:id="@+id/btnAdUpdate" android:tag="row" style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="Update ad blocklist"/>
+            <TextView android:id="@+id/adStatus" android:tag="sub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textAppearance="?attr/textAppearanceBodySmall"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/sw_continue" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:minHeight="48dp" android:text="Continue watching"
+                android:textColor="?attr/colorOnSurface" android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <TextView android:tag="sub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingEnd="64dp" android:text="Offers to reopen the last page when you start the app" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textAppearance="?attr/textAppearanceBodySmall"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/sw_gestures" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:minHeight="48dp" android:text="Fullscreen gestures"
+                android:textColor="?attr/colorOnSurface" android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <TextView android:tag="sub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingEnd="64dp" android:text="Swipe the left side for brightness, the right side for volume" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textAppearance="?attr/textAppearanceBodySmall"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/sw_dark" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:minHeight="48dp" android:text="Force dark pages"
+                android:textColor="?attr/colorOnSurface" android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <TextView android:tag="sub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingEnd="64dp" android:text="Turns light websites dark" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textAppearance="?attr/textAppearanceBodySmall"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/sw_scripts" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:minHeight="48dp" android:text="Custom scripts and styles"
+                android:textColor="?attr/colorOnSurface" android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <TextView android:tag="sub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingEnd="64dp" android:text="Run your own CSS and JavaScript on pages" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textAppearance="?attr/textAppearanceBodySmall"/>
+            <Button android:id="@+id/btnEditScripts" android:tag="row" style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="Edit scripts and styles"/>
+        </LinearLayout>
+        <LinearLayout android:tag="section" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:tag="header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Downloads" android:textColor="?attr/colorPrimary"
+            android:textAppearance="?attr/textAppearanceLabelLarge"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/sw_wifi" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:minHeight="48dp" android:text="Wi-Fi only downloads"
+                android:textColor="?attr/colorOnSurface" android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/sw_delafter" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:minHeight="48dp" android:text="Delete after watching"
+                android:textColor="?attr/colorOnSurface" android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <TextView android:tag="sub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingEnd="64dp" android:text="Removes a download once it finishes in the built-in player" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textAppearance="?attr/textAppearanceBodySmall"/>
+        </LinearLayout>
+        <LinearLayout android:tag="section" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:tag="header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Privacy" android:textColor="?attr/colorPrimary"
+            android:textAppearance="?attr/textAppearanceLabelLarge"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/sw_lock" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:minHeight="48dp" android:text="App lock"
+                android:textColor="?attr/colorOnSurface" android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <TextView android:tag="sub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingEnd="64dp" android:text="Unlocks with fingerprint or face, or your phone's PIN. Also hides the app preview in Recents and blocks screenshots" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textAppearance="?attr/textAppearanceBodySmall"/>
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/sw_incognito" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="4dp" android:minHeight="48dp" android:text="Incognito mode"
+                android:textColor="?attr/colorOnSurface" android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <TextView android:tag="sub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingEnd="64dp" android:text="Keeps no cache or history, and clears cookies and site data when you exit" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textAppearance="?attr/textAppearanceBodySmall"/>
+            <TextView android:tag="row" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="DNS (DNS-over-HTTPS)" android:textColor="?attr/colorOnSurface"
+                android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <TextView android:tag="sub" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingEnd="64dp" android:text="Change this if a site won't load" android:textColor="?attr/colorOnSurfaceVariant"
+                android:textAppearance="?attr/textAppearanceBodySmall"/>
+            <com.google.android.material.chip.ChipGroup android:id="@+id/dnsGroup" android:tag="row"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" app:selectionRequired="true" app:singleSelection="true">
+                <com.google.android.material.chip.Chip android:id="@+id/d0" style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="System"/>
+                <com.google.android.material.chip.Chip android:id="@+id/d1" style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cloudflare"/>
+                <com.google.android.material.chip.Chip android:id="@+id/d2" style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Google"/>
+                <com.google.android.material.chip.Chip android:id="@+id/d3" style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AdGuard"/>
+                <com.google.android.material.chip.Chip android:id="@+id/d4" style="@style/Widget.Material3.Chip.Filter"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Quad9"/>
+            </com.google.android.material.chip.ChipGroup>
+        </LinearLayout>
+        <LinearLayout android:tag="section" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:tag="header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" android:text="Websites" android:textColor="?attr/colorPrimary"
+            android:textAppearance="?attr/textAppearanceLabelLarge"/>
+            <Button android:id="@+id/btnAddSite" android:tag="row" style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="Add your own website"/>
+            <Button android:id="@+id/btnManageSites" android:tag="row" style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="Manage websites"/>
+        </LinearLayout>
+        <LinearLayout android:tag="section" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView android:tag="header" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="24dp" android:text="About" android:textColor="?attr/colorPrimary"
+                android:textAppearance="?attr/textAppearanceLabelLarge"/>
+            <TextView android:id="@+id/aboutVersion" android:tag="row" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:textColor="?attr/colorOnSurface"
+                android:textAppearance="?attr/textAppearanceBodyLarge"/>
+            <LinearLayout android:tag="row" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:orientation="horizontal">
+                <Button android:id="@+id/btnGithub" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="GitHub page"/>
+                <Button android:id="@+id/btnIssue" style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="8dp" android:text="Report an issue"/>
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="28dp" android:gravity="center"
+            android:text="Made with ❤ by Zain &amp; Sonnet 5.5"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textAppearance="?attr/textAppearanceBodySmall"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
