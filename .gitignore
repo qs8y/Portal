@@ -16,3 +16,6 @@ local.properties
 *.jks
 *.keystore
 keystore.properties
+
+# Local helper
+publish.sh

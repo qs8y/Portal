@@ -122,8 +122,8 @@ class MainActivity : AppCompatActivity() {
     private var rotLocked = false
     private var unlocked = false
     private var authInProgress = false
-    private val REPO_URL = "https://github.com/losisu/Portal"
-    private val DEFAULT_UPDATE = "https://api.github.com/repos/losisu/Portal/releases/latest"
+    private val REPO_URL = "https://github.com/qs8y/Portal"
+    private val DEFAULT_UPDATE = "https://api.github.com/repos/qs8y/Portal/releases/latest"
     private val clients = ConcurrentHashMap<Int, OkHttpClient>()
     private fun clientFor(m: Int): OkHttpClient = clients.getOrPut(m) { makeClient(m) }
     private fun hostOf(u: String?): String = Uri.parse(u ?: "").host?.removePrefix("www.") ?: ""

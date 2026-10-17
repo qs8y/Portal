@@ -17,7 +17,7 @@ It ships with **no websites**. On first launch you add the ones you want.
 
 ## Install
 
-1. Open the [latest release](https://github.com/losisu/Portal/releases/latest).
+1. Open the [latest release](https://github.com/qs8y/Portal/releases/latest).
 2. Download the `.apk` file and install it. Android will ask you to allow installs from your browser or file manager.
 
 Portal checks this repository for new releases and tells you when one is available. You can change or clear the update source in **Settings > General > Update source**.

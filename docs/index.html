@@ -26,7 +26,7 @@ a { color:var(--accent); }
 <main>
   <h1>Portal</h1>
   <p class="lead">Browse the websites you add, with a built-in player and saved states that remember the exact second.</p>
-  <a class="btn" id="dl" href="https://github.com/losisu/Portal/releases/latest">Download for Android</a>
+  <a class="btn" id="dl" href="https://github.com/qs8y/Portal/releases/latest">Download for Android</a>
   <span class="sub" id="ver">Latest release on GitHub</span>
   <ul>
     <li><b>Your sites only</b><span>No websites are included. Add the ones you want when you first open the app.</span></li>
@@ -36,12 +36,12 @@ a { color:var(--accent); }
     <li><b>Per-site settings</b><span>Dark pages, custom scripts and DNS for each website.</span></li>
   </ul>
   <footer>
-    <a href="https://github.com/losisu/Portal">Source on GitHub</a> &middot; <a href="https://github.com/losisu/Portal/issues">Report an issue</a><br>
+    <a href="https://github.com/qs8y/Portal">Source on GitHub</a> &middot; <a href="https://github.com/qs8y/Portal/issues">Report an issue</a><br>
     Portal includes no content. You are responsible for what you open and for following each website's terms.
   </footer>
 </main>
 <script>
-fetch("https://api.github.com/repos/losisu/Portal/releases/latest").then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
+fetch("https://api.github.com/repos/qs8y/Portal/releases/latest").then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
   if (!j) return;
   var apk = (j.assets || []).filter(function (a) { return /\.apk$/.test(a.name); })[0];
   if (apk) document.getElementById("dl").href = apk.browser_download_url;
